@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Word Counter for Essays - Free Online Essay Word Counter</title>
+
+<meta name="description" content="Free word counter for essays. Count words, characters, sentences and paragraphs instantly. Perfect for students, assignments and academic writing.">
+
+<meta name="robots" content="index, follow">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7f9;
+  color: #171717;
+}
+
+header {
+  text-align: center;
+  background: white;
+  padding: 35px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  color: #666;
+}
+
+main {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 15px;
+}
+
+textarea {
+  width: 100%;
+  height: 260px;
+  padding: 18px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  font-size: 17px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.stat {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.stat small {
+  color: #666;
+}
+
+.info {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  margin-top: 25px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  margin-top: 22px;
+}
+
+p {
+  line-height: 1.7;
+  color: #444;
+}
+
+a {
+  color: #171717;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  textarea {
+    height: 230px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Word Counter for Essays</h1>
+<p>Free online tool to count words in your essay instantly.</p>
+</header>
+
+<main>
+
+<textarea id="textInput" placeholder="Paste or type your essay here..."></textarea>
+
+<div class="stats">
+
+<div class="stat">
+<span id="wordCount">0</span>
+<small>Words</small>
+</div>
+
+<div class="stat">
+<span id="characterCount">0</span>
+<small>Characters</small>
+</div>
+
+<div class="stat">
+<span id="sentenceCount">0</span>
+<small>Sentences</small>
+</div>
+
+<div class="stat">
+<span id="paragraphCount">0</span>
+<small>Paragraphs</small>
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>Free Word Counter for Essays</h2>
+
+<p>
+Our free word counter for essays helps students quickly check the length of their academic writing. Simply paste your essay into the box above and the tool instantly counts words, characters, sentences and paragraphs.
+</p>
+
+<h2>Why Check Your Essay Word Count?</h2>
+
+<p>
+Many schools, colleges and universities give students a specific word limit for essays. Checking your word count before submitting an assignment can help you stay within the required limit and organize your writing more effectively.
+</p>
+
+<h2>How to Count Words in an Essay</h2>
+
+<p>
+Copy your essay and paste it into the text box above. The word counter automatically calculates the number of words in your essay. You can edit your text at any time and the results update instantly.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Does the word counter count every word?</h3>
+
+<p>
+The tool counts words separated by spaces and provides an instant word count.
+</p>
+
+<h3>Can I use this for a college assignment?</h3>
+
+<p>
+Yes. You can use this tool to check essays, assignments, reports and other academic writing.
+</p>
+
+<h3>Is this essay word counter free?</h3>
+
+<p>
+Yes. This essay word counter is free to use online.
+</p>
+
+<p>
+<a href="../">← Back to Free Word Counter</a>
+</p>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Free Word Counter</p>
+</footer>
+
+<script>
+const textInput = document.getElementById("textInput");
+
+function countText() {
+
+  const text = textInput.value;
+
+  const words = text.trim()
+    ? text.trim().split(/\s+/)
+    : [];
+
+  const sentences = text.trim()
+    ? text.trim().split(/[.!?]+/).filter(x => x.trim())
+    : [];
+
+  const paragraphs = text.trim()
+    ? text.trim().split(/\n\s*\n/).filter(x => x.trim())
+    : [];
+
+  document.getElementById("wordCount").textContent = words.length;
+  document.getElementById("characterCount").textContent = text.length;
+  document.getElementById("sentenceCount").textContent = sentences.length;
+  document.getElementById("paragraphCount").textContent = paragraphs.length;
+}
+
+textInput.addEventListener("input", countText);
+</script>
+
+</body>
+</html>
