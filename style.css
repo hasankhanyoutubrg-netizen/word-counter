@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f8fa;
+  color: #171717;
+}
+
+header {
+  background: #ffffff;
+  text-align: center;
+  padding: 55px 20px 35px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+header p {
+  margin: 12px 0 0;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+main {
+  width: 100%;
+  max-width: 920px;
+  margin: 35px auto;
+  padding: 0 18px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  padding: 22px;
+  resize: vertical;
+  border: 1px solid #dfe3e8;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #171717;
+  font-size: 17px;
+  line-height: 1.6;
+  outline: none;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+textarea:focus {
+  border-color: #111827;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.stat {
+  background: #ffffff;
+  border: 1px solid #e8eaed;
+  border-radius: 12px;
+  padding: 18px 10px;
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stat small {
+  color: #737373;
+  font-size: 13px;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 22px;
+  margin-right: 8px;
+  background: #171717;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333333;
+}
+
+#clearBtn {
+  background: #eeeeee;
+  color: #222222;
+}
+
+#clearBtn:hover {
+  background: #e2e2e2;
+}
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 40px 15px 28px;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  main {
+    margin: 22px auto;
+    padding: 0 14px;
+  }
+
+  textarea {
+    min-height: 240px;
+    padding: 17px;
+    font-size: 16px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stat {
+    padding: 15px 8px;
+  }
+
+  .stat span {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
