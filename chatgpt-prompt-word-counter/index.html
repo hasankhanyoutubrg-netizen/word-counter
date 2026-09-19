@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ChatGPT Prompt Word Counter - Free Online Tool</title>
+
+<meta name="description" content="Free ChatGPT prompt word counter. Count words, characters, sentences and paragraphs in your AI prompts instantly.">
+
+<meta name="robots" content="index, follow">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7f9;
+  color: #171717;
+}
+
+header {
+  text-align: center;
+  background: white;
+  padding: 35px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  color: #666;
+}
+
+main {
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 15px;
+}
+
+textarea {
+  width: 100%;
+  height: 260px;
+  padding: 18px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  font-size: 17px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.stat {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.stat small {
+  color: #666;
+}
+
+.info {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  margin-top: 25px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  margin-top: 22px;
+}
+
+p {
+  line-height: 1.7;
+  color: #444;
+}
+
+a {
+  color: #171717;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  textarea {
+    height: 230px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>ChatGPT Prompt Word Counter</h1>
+<p>Free online tool to count words and characters in your ChatGPT prompts.</p>
+</header>
+
+<main>
+
+<textarea id="textInput" placeholder="Paste or type your ChatGPT prompt here..."></textarea>
+
+<div class="stats">
+
+<div class="stat">
+<span id="wordCount">0</span>
+<small>Words</small>
+</div>
+
+<div class="stat">
+<span id="characterCount">0</span>
+<small>Characters</small>
+</div>
+
+<div class="stat">
+<span id="sentenceCount">0</span>
+<small>Sentences</small>
+</div>
+
+<div class="stat">
+<span id="paragraphCount">0</span>
+<small>Paragraphs</small>
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>Free ChatGPT Prompt Word Counter</h2>
+
+<p>
+This free ChatGPT prompt word counter helps you quickly check the length of your AI prompts. Paste your prompt into the box above and instantly see the number of words, characters, sentences and paragraphs.
+</p>
+
+<h2>Why Count the Words in a ChatGPT Prompt?</h2>
+
+<p>
+Long prompts can contain detailed instructions, examples and background information. Checking the length of your prompt can help you organize your instructions and make them easier to review.
+</p>
+
+<h2>How to Count Words in a ChatGPT Prompt</h2>
+
+<p>
+Copy your ChatGPT prompt and paste it into the text box above. The tool automatically calculates the word count and other text statistics as you type or edit your prompt.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can I count a ChatGPT prompt with this tool?</h3>
+
+<p>
+Yes. Paste your ChatGPT prompt into the counter and it will calculate the number of words and characters.
+</p>
+
+<h3>Does this tool count characters too?</h3>
+
+<p>
+Yes. The tool displays both the total word count and character count.
+</p>
+
+<h3>Is this ChatGPT prompt counter free?</h3>
+
+<p>
+Yes. The tool is free to use online and does not require any software installation.
+</p>
+
+<p>
+<a href="../">← Back to Free Word Counter</a>
+</p>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Free Word Counter</p>
+</footer>
+
+<script>
+const textInput = document.getElementById("textInput");
+
+function countText() {
+
+  const text = textInput.value;
+
+  const words = text.trim()
+    ? text.trim().split(/\s+/)
+    : [];
+
+  const sentences = text.trim()
+    ? text.trim().split(/[.!?]+/).filter(x => x.trim())
+    : [];
+
+  const paragraphs = text.trim()
+    ? text.trim().split(/\n\s*\n/).filter(x => x.trim())
+    : [];
+
+  document.getElementById("wordCount").textContent = words.length;
+  document.getElementById("characterCount").textContent = text.length;
+  document.getElementById("sentenceCount").textContent = sentences.length;
+  document.getElementById("paragraphCount").textContent = paragraphs.length;
+}
+
+textInput.addEventListener("input", countText);
+</script>
+
+</body>
+</html>
